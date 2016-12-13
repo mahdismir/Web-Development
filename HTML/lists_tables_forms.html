@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>lists, tables, forms</title>
+    </head>
+    
+    <body>
+    <h1>LISTS:</h1>
+        
+    <!-- Unordered Lists -->
+        <h3>here is a list of classes:</h3>
+        <ul>
+            <li>CSE 100</li>
+            <li>CSE 120</li>
+            <li>CSE 101</li>
+        </ul>
+    
+    <!-- Ordered Lists -->
+        <h3>here is a list of books:</h3>
+        <ol>
+            <li>The Giving Tree</li>
+            <li>The Missing Piece</li>
+            <li>A light in the Attic</li>
+        </ol>
+        
+    <!-- Description List -->
+        <h3>here is a list of definitions:</h3>
+        <dl> <!-- description list -->
+            <dt>Apple</dt> <!-- description title -->
+                <dd>a round fruit of a tree</dd> <!-- description description -->
+            <dt>Pomegranate</dt>
+                <dd>an orange-sized fruit with a tough reddish outer skin</dd>
+        
+        </dl>
+            
+    <h1>TABALES:</h1>
+        <table>
+        
+            <tr> <!-- table row -->
+                <th>Name</th> <!-- table heading -->
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+            
+            <tr>
+                <td>John</td> <!-- Table data -->
+                <td>30</td>
+                <td>San Jose</td>
+            </tr>
+                    
+        </table>
+            
+    
+    <h1>FORMS:</h1>
+        <form>
+            <fieldset> <!-- the wrapper of the form -->
+                <legend>Profile Info</legend>
+                
+                <label>Your Name</label>
+                <input type="text" placeholder="Enter your name">
+                <br>
+                <lable>Your e-mail</lable>
+                <input type="email" placeholder="Enter your e-mail">
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password">
+                
+                <br><br>
+                
+                <label>Gender</label><br>
+                <!-- the name attribute is to group the radio buttons together -->
+                <input type="radio" name="gender"> Female <br>
+                <input type="radio" name="gender"> Male
+                
+                <br><br>
+                
+                <label>Type of Computer</label><br>
+                <input type="checkbox"> Laptop<br> <!-- good practice to name them as well -->
+                <input type="checkbox"> Desktop 
+                
+                <br><br>
+                
+                <label>Age</label><br>
+                <select>
+                    <option>0-20</option>
+                    <option>20-40</option>
+                    <option>40+</option>
+                </select>
+                
+                <br><br>
+                
+                <label>Message</label><br>
+                <textarea rows="10" cols="80"></textarea>
+                
+                <br><br>
+                
+                <input type="submit" value="Save my info">
+                <input type="reset" value="Clear the info">
+            </fieldset>
+        
+        
+        
+        
+        
+        </form>
+    
+    
+    </body>
+
+
+</html>
