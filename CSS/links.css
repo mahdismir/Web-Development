@@ -1,0 +1,52 @@
+#styling-links {
+    background: #333;
+}
+
+#styling-links #container {
+    background: white;
+    text-align: center;
+    width: 640px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+a {
+    display: inline-block;
+}
+/* it has to be in the following order! */
+
+/* Unvisited */
+a:link {
+    color: #fc3;
+}
+
+/* Visited */
+a:visited {
+    color: #fc3;
+}
+
+/* Hovered / Mouse-over */
+a:hover {
+    color: green;
+}
+
+/* Active */
+a:active {
+    color: black;
+}
+
+a#link-1:link {
+    background: #333;
+    padding: 10px;
+    text-decoration: none;
+
+}
+
+a#link-1:hover {
+    background: #f3c;
+    color: white;
+}
+
+a#link-1:active {
+    background: #777;
+}

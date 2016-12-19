@@ -1,0 +1,63 @@
+body {
+    background-color: bisque;
+}
+h1 {
+    font-size: 50px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h2#h2-id {
+    color: aqua;
+    background: #353535;
+}
+
+.h2-class {
+    color: yellow;
+    border: solid 10px pink;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    font-style: italic;
+}
+
+
+/* Styles for the Descendant Selectors topic */
+
+.primary-box {
+    background-color: green;
+    border: solid 10px #333;
+    padding: 20px;
+}
+.secondary-box {
+    background-color: blueviolet;
+    color: white;
+    padding: 10px;
+    /* font size can't be changed here since we have previously 
+       set the p tag to have font-size so we need to use Descendant Selectors! */
+}
+
+.secondary-box p {
+    font-size: 14px;
+    font-style: normal;
+}
+.secondary-box p em {
+    color: deeppink;
+}
+
+
+/* Styles for the Descendant Selectors topic */
+
+#mainGroupingContainer {
+    width: 960px;
+    margin: 0 auto; /* auto will calculate the left and right, so the content is centered*/
+}
+.grouping-1-box, .grouping-2-box {
+    background-color: dodgerblue;
+    color: black;
+    text-align: center;
+    border-bottom: solid 10px black;
+    padding: 0 0 10px;
+    margin: 30px 50px;
+}
