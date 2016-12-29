@@ -1,0 +1,50 @@
+#container {
+    width: 600px;
+    margin: 0 auto;
+}
+#positioning {
+    background: #1b4e5e;
+}
+#positioning #container {
+    background: white;
+    padding: 20px;
+    height: 2000px;
+}
+
+#positioning h2 {
+    font-size: 18px;
+}
+
+.box {
+    background: #db4e3e;
+    color: white;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    line-height: 200px; /* make the text veritcally centered */
+    text-transform: uppercase;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#relative {
+    position: relative;
+    top: 10px; /* will be relative to the top left corner */
+    left: 10px;
+    
+}
+
+#absolute {
+    position: absolute;
+    /* will move based on the position of the parent */
+    bottom: 0;
+    right: 0;
+}
+
+#fixed {
+    position: fixed;
+    /* will be fixed on the screen. for example if you scorl the fixed boxed will not move */
+    bottom: 10px;
+    left: 40px;
+}
