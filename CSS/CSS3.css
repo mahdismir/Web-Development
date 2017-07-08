@@ -1,0 +1,228 @@
+/* box sizing */
+
+.box {
+    position: relative; /* this is set for the animation & transition section */
+    background: red;
+    height: 200px;
+    width: 200px;
+    margin: 40px auto;
+    padding: 50px;
+    box-sizing: border-box; /* remove to see what happens */
+    /* border-radius: 10px; */
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+/* colors */ 
+
+#colors {
+    background: rgba(45, 32, 65, 1);
+    color: white;
+    padding: 40px;
+}
+
+#colors .container {
+    width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#colors .box {
+    display: inline-block;
+    margin: 40px 20px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-radius: 10px;
+}
+
+#colors #one{
+    background: linear-gradient(to right, red , yellow);
+}
+
+#colors #two{
+    background: linear-gradient(to bottom right, red, yellow);
+}
+
+#colors #three{
+    background: linear-gradient(-90deg, red, yellow)
+}
+
+#colors #four{
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+}
+
+#colors #five{
+    background: repeating-linear-gradient(-30deg, red, yellow 10%, green 20%);
+}
+
+#colors #six{
+    background: radial-gradient(red, yellow, green);
+}
+
+#colors #seven{
+    background: radial-gradient(red 5%, yellow 15%, green 60%);
+}
+
+#colors #eight{
+    background: radial-gradient(circle, red, yellow, green); 
+}
+
+#colors #nine{
+    background: repeating-radial-gradient(red, yellow 10%, green 15%);
+}
+
+/* shadows */
+
+#shadows .container {
+    width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #fc3;
+    
+    box-shadow: 10px 10px 5px #333;
+    
+    /* or spread with the fourth number like below */
+    /* box-shadow: 0px 20px 5px -10px #333; */  
+}
+
+#shadows h1 {
+    color: white;
+    
+    /* no blur */
+    text-shadow: 2px 2px black;
+    
+    /* to blur the shadow */
+    /* text-shadow: 2px 2px 10px black; */
+    
+    /* two shadows */
+    /* text-shadow: 0 2px 5px blue, 0 2px 10px red; */
+}
+
+/* columns */
+
+#three-columns {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    
+    -webkit-column-rule-style: solid;
+    -moz-column-rule-style: solid;
+    column-rule-style: solid;
+    
+    -webkit-column-rule-width: 1px;
+    -moz-column-rule-width: 1px;
+    column-rule-width: 1px;
+    
+    -webkit-column-rule-color: #fc3;
+    -moz-column-rule-color: #fc3;
+    column-rule-color: #fc3;
+}
+
+/* Animation and Transitions */
+
+#animations .container {
+    width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    box-sizing: border-box;
+     
+}
+
+#animations .box {
+    margin: 40px auto;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-radius: 10px;
+}
+
+@keyframes nameofanimation {
+    
+    from {  background-color: red;
+            border-radius: 10px;
+            top: 0;
+            left: 0;}
+    to  { background-color: black;
+          border-radius: 100px;
+          top: 100px;
+          left: 100px;}
+}
+
+#animationbox {
+    animation-name: nameofanimation;
+    animation-duration: 10s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count:infinite; /* or make it a number like 3 */
+    animation-direction: alternate; /* to go back and forth */ /* or make it reverse */
+    
+    /* or */
+    /* animation: nameofanimation 10s linear 2s 3 alternate; */
+}
+
+/* Transition */
+
+#transition:hover {
+    position: relative;
+    background: blue;
+    width: 300px;
+    height: 300px;
+    
+    transition: all 4s;
+    transition-timing-function: ease-in;
+    
+    /* or the short version */
+    /* transition: all ease-in 4s;*/ 
+    
+    /* other thing we can do */
+    /*transition: width 8s, height 2s, background 20s;*/
+}
+
+/* Buttons */
+
+@keyframes buttonAnimation {
+    from { padding: 10px 20px; font-size: inherit;}
+    to { padding: 15px 30px; font-size: 24px;}
+}
+
+.button {
+    display: inline-block;
+    background: #fc3;
+    background: linear-gradient(#fc3, #f91);
+    border: solid 1px #999;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.button:hover {
+    border-collapse: #888;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.9);
+    background: #f91;
+    background: linear-gradient(to top, #fc3, #f91);
+    animation-name: buttonAnimation;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.button:active {
+    position: relative;
+    top: 1px;
+}
+
+.alt-button {
+    background: radial-gradient(#fc3, #f91);
+}
+
+.alt-button:hover {
+    background: radial-gradient(#f91, #fc3);
+}
